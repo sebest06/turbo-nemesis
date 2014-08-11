@@ -7,6 +7,7 @@
 
 enum Controles{
     playVideo = 1,
+    loopVideo = 2,
     stopVideo = 4,
     pauseVideo = 8,
     sendVideo = 16
@@ -28,6 +29,7 @@ class Espectaculo
         virtual ~Espectaculo();
 
         void setPlayVideo(std::string videoName);
+        void setLoopVideo(std::string videoName);
         void setPauseVideo(void);
         void setStopVideo(void);
 

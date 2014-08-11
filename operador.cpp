@@ -33,6 +33,11 @@ void Operador::procesarDatos(char* buffer, int len)
     {
         ElEspectaculo::Instance()->setStopVideo();
     }
+    else if(strcmp(pch,"loopVideo") == 0)
+    {
+        ElEspectaculo::Instance()->setLoopVideo(strtok (NULL,"\r\n"));
+    }
+
 
 
 }

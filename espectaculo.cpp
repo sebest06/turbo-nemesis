@@ -22,6 +22,15 @@ void Espectaculo::setPlayVideo(std::string videoName)
     printf("el tam es %d\n",videoName.length() + 1);
 }
 
+void Espectaculo::setLoopVideo(std::string videoName)
+{
+    char buff[100];
+    buff[0] = loopVideo;
+    strncpy( buff+1,videoName.c_str(),videoName.length());
+    sendToAllVisor(buff,(videoName.length()) + 1);
+    printf("el tam es %d\n",videoName.length() + 1);
+}
+
 void Espectaculo::setPauseVideo(void)
 {
     char buff[100];
